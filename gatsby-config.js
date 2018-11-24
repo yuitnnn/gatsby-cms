@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'YuiTech | 文系卒webエンジニアの備忘録',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
