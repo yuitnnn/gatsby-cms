@@ -1,10 +1,11 @@
 ---
+path: "/hello-world"
 templateKey: blog-post
-title: テスト投稿
-date: 2018-11-24T05:43:02.532Z
-description: テスト投稿
+title: test
+date: 2018-12-02T05:43:02.532Z
+description: test
 tags:
-  - テスト
+  - test
 ---
 サンプルテキストサンプルテキストサンプルテキスト
 
