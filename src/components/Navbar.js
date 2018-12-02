@@ -7,16 +7,13 @@ import navStyles from "./styles/nav.module.scss"
 
 const Navbar = () => (
   <nav className="is-transparent">
-    <div>
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <figure className="image">
-            <img src={logo} alt="aa" style={{ width: '88px' }} />
-          </figure>
-        </Link>
-      </div>
+    <div className={navStyles.siteTitleContents}>
+      <Link to="/" className={navStyles.siteTitleLink}>
+        <h1 className={navStyles.siteTitle} style={{ fontFamily: 'Ubuntu' }}>YuiTech</h1>
+        <div className={navStyles.siteTitleBorder}></div>
+      </Link>
     </div>
-    <div className={navStyles.navContainer}>
+    {/* <div className={navStyles.navContainer}>
       <div className="container">
         <div className="navbar-start">
           <Link className="navbar-item" to="/about">
@@ -45,7 +42,7 @@ const Navbar = () => (
           </a>
         </div>
       </div>
-    </div>
+    </div> */}
   </nav>
 )
 
