@@ -9,9 +9,9 @@ const TemplateWrapper = ({ children }) => (
   <div className={containerStyles.container}>
     <Helmet
       title="YuiTech | webエンジニアの備忘録"
-      meta={[
-        { name: 'description', content: 'aaa' },
-      ]}
+      // meta={[
+      //   { name: 'description', content: 'aaa' },
+      // ]}
     />
     <Navbar />
     <div>{children}</div>
