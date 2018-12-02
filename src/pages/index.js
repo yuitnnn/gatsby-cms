@@ -23,7 +23,7 @@ export default class IndexPage extends React.Component {
                   key={post.id}
                 >
                   <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
+                    <Link className="has-text-primary" to={post.frontmatter.path}>
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
@@ -68,6 +68,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            path
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
