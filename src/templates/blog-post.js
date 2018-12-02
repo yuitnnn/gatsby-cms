@@ -74,6 +74,13 @@ const BlogPost = ({ data }) => {
           >
             <title>{`${post.frontmatter.title}`}</title>
             <meta name="description" content={`${post.frontmatter.description}`} />
+            <meta property="og:title" content={`${post.frontmatter.title}`} />
+            <meta property="og:description" content={`${post.frontmatter.description.slice(0,120)}`} />
+            <meta property="og:type" content="article" />
+            <meta property="og:url" content={`https://yuis-webmemo.org/${post.frontmatter.path}`} />
+            {/* <meta property="og:image" content="https://yuis-webmemo.org/wp-content/uploads/2018/07/20180721eyecatch.png" /> */}
+            <meta property="og:site_name" content="YuiTech" />
+            <meta name="twitter:card" content="summary_large_image" />
           </Helmet>
         }
         tags={post.frontmatter.tags}
