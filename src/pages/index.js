@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import indexStyles from "../components/styles/indexPage.module.scss"
 
 export default class IndexPage extends React.Component {
   render() {
@@ -12,32 +13,21 @@ export default class IndexPage extends React.Component {
       <Layout>
         <section className="section">
           <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
             {posts
               .map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                  key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.frontmatter.path}>
+                  <div
+                    className={indexStyles.content}
+                    style={{ padding: '2em 4em' }}
+                    key={post.id}
+                  >
+                    <span className={indexStyles.date}>{post.frontmatter.date}</span>
+                    <Link className={indexStyles.title} to={post.frontmatter.path}>
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
-                </div>
+                    <p>
+                      {post.excerpt}
+                    </p>
+                  </div>
               ))}
           </div>
         </section>
@@ -71,7 +61,7 @@ export const pageQuery = graphql`
             path
             title
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "YYYY-MM-DD")
           }
         }
       }
