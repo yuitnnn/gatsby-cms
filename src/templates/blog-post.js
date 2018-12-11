@@ -4,6 +4,7 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
+import Share from '../components/Share'
 import Content, { HTMLContent } from '../components/Content'
 import indexStyles from "../components/styles/indexPage.module.scss"
 
@@ -44,7 +45,9 @@ export const BlogPostTemplate = ({
                   </ul>
                 </div>
               ) : null}
-              <a href={`http://twitter.com/share?url=https%3A%2F%2Fyuis-webmemo.org${path}%2F&amp;text=${title}%20-%20YuiTech&amp;via=yu_webmemo`} target="_blank" rel="nofollow">Twitter</a>
+              <Share
+                twitterUrl={`http://twitter.com/share?url=https%3A%2F%2Fyuis-webmemo.org${path}%2F&amp;text=${title}%20-%20YuiTech&amp;via=yu_webmemo`}
+              />
             </div>
           </div>
         </div>
