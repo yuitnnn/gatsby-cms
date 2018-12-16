@@ -5,6 +5,16 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import indexStyles from "../components/styles/indexPage.module.scss"
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+// import { faIgloo } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons'
+
+library.add(
+  // faIgloo,
+  faTwitter,
+  faFacebook
+)
+
 // top-page
 export default class IndexPage extends React.Component {
   render() {

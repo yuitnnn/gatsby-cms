@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import indexStyles from "../components/styles/indexPage.module.scss"
 
@@ -10,8 +9,12 @@ const Share = ({
   fbUrl,
 }) => (
     <React.Fragment>
-      <a href={twitterUrl} target="_blank" rel="nofollow">Twitter</a>
-      <a href={fbUrl} target="_blank" rel="nofollow">Facebook</a>
+      <a href={twitterUrl} target="_blank" rel="nofollow">
+        <FontAwesomeIcon icon={['fab', 'twitter']} />
+      </a>
+      <a href={fbUrl} target="_blank" rel="nofollow">
+        <FontAwesomeIcon icon={['fab', 'facebook']} />
+      </a>
     </React.Fragment>
 )
 
