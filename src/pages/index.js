@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import indexStyles from "../components/styles/indexPage.module.scss"
 
+// top-page
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
@@ -12,23 +13,27 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <section className="section">
-          <div className="container">
-            {posts
-              .map(({ node: post }) => (
-                  <div
-                    className={indexStyles.content}
-                    style={{ padding: '2em 4em' }}
-                    key={post.id}
-                  >
-                    <span className={indexStyles.date}>{post.frontmatter.date}</span>
-                    <Link className={indexStyles.title} to={post.frontmatter.path}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <p>
-                      {post.excerpt}
-                    </p>
-                  </div>
-              ))}
+        <div className="container content">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              {posts
+                .map(({ node: post }) => (
+                    <div
+                      className={indexStyles.content}
+                      style={{ padding: '2em 4em' }}
+                      key={post.id}
+                    >
+                      <span className={indexStyles.date}>{post.frontmatter.date}</span>
+                      <Link className={indexStyles.title} to={post.frontmatter.path}>
+                        {post.frontmatter.title}
+                      </Link>
+                      <p>
+                        {post.excerpt}
+                      </p>
+                    </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       </Layout>
