@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import indexStyles from "../components/styles/indexPage.module.scss"
@@ -12,6 +13,19 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
+        <Helmet
+          titleTemplate="%s | Blog"
+        >
+          <title>{`${post.frontmatter.title}`}</title>
+          <meta name="description" content="フロントエンドエンジニアの備忘録" />
+          <meta property="og:title" content="YuiTech" />
+          <meta property="og:description" content="フロントエンドエンジニアの備忘録" />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content="https://yuis-webmemo.org/" />
+          <meta property="og:image" content="/img/site-ogp-img.png" />
+          <meta property="og:site_name" content="YuiTech" />
+          <meta name="twitter:card" content="summary_large_image" />
+        </Helmet>
         <section className="section">
         <div className="container content">
           <div className="columns">
