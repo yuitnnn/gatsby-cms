@@ -30,3 +30,28 @@
 .postTitle {
   margin: 6px 0 40px !important;
 }
+
+.tagContent {
+  margin-top: 20px;
+  display: flex;
+  font-size: 14px;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0 !important;
+  margin-left: 10px !important;
+}
+
+.tagListItem {
+  text-decoration: underline;
+  color: #444444;
+  margin-top: 0 !important;
+  list-style-type: none;
+  margin-right: 6px;
+
+  > a {
+    color: #928484;
+  }
+}

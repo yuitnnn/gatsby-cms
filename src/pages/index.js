@@ -7,12 +7,12 @@ import indexStyles from "../components/styles/indexPage.module.scss"
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 // import { faIgloo } from '@fortawesome/free-solid-svg-icons'
-import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
   // faIgloo,
   faTwitter,
-  faFacebook
+  faFacebookF
 )
 
 // top-page

@@ -33,22 +33,22 @@ export const BlogPostTemplate = ({
               </h1>
               <p>{description}</p>
               <PostContent content={content} />
+              <Share
+                twitterUrl={`http://twitter.com/share?url=https%3A%2F%2Fyuis-webmemo.org${path}%2F&;text=${title}%20-%20YuiTech&amp;via=yu_webmemo`}
+                fbUrl={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyuis-webmemo.org${path}%2F&">Facebook</a>`}
+              />
               {tags && tags.length ? (
-                <div style={{ marginTop: `4rem` }}>
-                  <h4>Tags</h4>
-                  <ul className="taglist">
+                <div className={indexStyles.tagContent}>
+                  <p>Tags:</p>
+                  <ul className={indexStyles.tagList}>
                     {tags.map(tag => (
-                      <li key={tag + `tag`}>
+                      <li key={tag + `tag`} className={indexStyles.tagListItem}>
                         <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                       </li>
                     ))}
                   </ul>
                 </div>
               ) : null}
-              <Share
-                twitterUrl={`http://twitter.com/share?url=https%3A%2F%2Fyuis-webmemo.org${path}%2F&;text=${title}%20-%20YuiTech&amp;via=yu_webmemo`}
-                fbUrl={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyuis-webmemo.org${path}%2F&">Facebook</a>`}
-              />
             </div>
           </div>
         </div>
