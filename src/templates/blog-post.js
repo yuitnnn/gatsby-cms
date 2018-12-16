@@ -46,7 +46,8 @@ export const BlogPostTemplate = ({
                 </div>
               ) : null}
               <Share
-                twitterUrl={`http://twitter.com/share?url=https%3A%2F%2Fyuis-webmemo.org${path}%2F&amp;text=${title}%20-%20YuiTech&amp;via=yu_webmemo`}
+                twitterUrl={`http://twitter.com/share?url=https%3A%2F%2Fyuis-webmemo.org${path}%2F&;text=${title}%20-%20YuiTech&amp;via=yu_webmemo`}
+                fbUrl={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyuis-webmemo.org${path}%2F&">Facebook</a>`}
               />
             </div>
           </div>
@@ -83,7 +84,7 @@ const BlogPost = ({ data }) => {
             <meta property="og:description" content={`${post.frontmatter.description.slice(0,120)}`} />
             <meta property="og:type" content="article" />
             <meta property="og:url" content={`https://yuis-webmemo.org/${post.frontmatter.path}`} />
-            <meta property="og:image" content="/img/site-ogp-img.png" />
+            <meta property="og:image" content="https://yuis-webmemo.org/img/site-ogp-img.png" />
             <meta property="og:site_name" content="YuiTech" />
             <meta name="twitter:card" content="summary_large_image" />
           </Helmet>

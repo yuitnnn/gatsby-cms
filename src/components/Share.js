@@ -7,8 +7,12 @@ import indexStyles from "../components/styles/indexPage.module.scss"
 
 const Share = ({
   twitterUrl,
+  fbUrl,
 }) => (
-  <a href={twitterUrl} target="_blank" rel="nofollow">Twitter</a>
+    <React.Fragment>
+      <a href={twitterUrl} target="_blank" rel="nofollow">Twitter</a>
+      <a href={fbUrl} target="_blank" rel="nofollow">Facebook</a>
+    </React.Fragment>
 )
 
 export default Share;

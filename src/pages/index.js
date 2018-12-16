@@ -20,7 +20,7 @@ export default class IndexPage extends React.Component {
           <meta property="og:description" content="フロントエンドエンジニアの備忘録" />
           <meta property="og:type" content="article" />
           <meta property="og:url" content="https://yuis-webmemo.org/" />
-          <meta property="og:image" content="/img/site-ogp-img.png" />
+          <meta property="og:image" content="https://yuis-webmemo.org/img/site-ogp-img.png" />
           <meta property="og:site_name" content="YuiTech" />
           <meta name="twitter:card" content="summary_large_image" />
         </Helmet>
