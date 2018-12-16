@@ -13,10 +13,8 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <Helmet
-          titleTemplate="%s | Blog"
-        >
-          <title>{`${post.frontmatter.title}`}</title>
+        <Helmet>
+          <title>YuiTech</title>
           <meta name="description" content="フロントエンドエンジニアの備忘録" />
           <meta property="og:title" content="YuiTech" />
           <meta property="og:description" content="フロントエンドエンジニアの備忘録" />
