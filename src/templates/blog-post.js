@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import Share from '../components/Share'
 import Content, { HTMLContent } from '../components/Content'
 import indexStyles from "../components/styles/indexPage.module.scss"
+import ogpImage from '../img/site-ogp-img.png'
 
 export const BlogPostTemplate = ({
   content,
@@ -83,7 +84,7 @@ const BlogPost = ({ data }) => {
             <meta property="og:description" content={`${post.frontmatter.description.slice(0,120)}`} />
             <meta property="og:type" content="article" />
             <meta property="og:url" content={`https://yuis-webmemo.org/${post.frontmatter.path}`} />
-            {/* <meta property="og:image" content="https://yuis-webmemo.org/wp-content/uploads/2018/07/20180721eyecatch.png" /> */}
+            <meta property="og:image" content={ogpImage} />
             <meta property="og:site_name" content="YuiTech" />
             <meta name="twitter:card" content="summary_large_image" />
           </Helmet>
