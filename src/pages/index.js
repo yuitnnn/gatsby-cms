@@ -5,6 +5,17 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import indexStyles from "../components/styles/indexPage.module.scss"
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+// import { faIgloo } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
+
+library.add(
+  // faIgloo,
+  faTwitter,
+  faFacebookF,
+  faGithub
+)
+
 // top-page
 export default class IndexPage extends React.Component {
   render() {
@@ -27,12 +38,12 @@ export default class IndexPage extends React.Component {
         <section className="section">
         <div className="container content">
           <div className="columns">
-            <div className="column is-10 is-offset-1">
+            <div className={indexStyles.column + ' ' + 'column' + ' ' + 'is-10' + ' ' + 'is-offset-1'}>
               {posts
                 .map(({ node: post }) => (
                     <div
                       className={indexStyles.content}
-                      style={{ padding: '2em 4em' }}
+                      // style={{ padding: '2em 4em' }}
                       key={post.id}
                     >
                       <span className={indexStyles.date}>{post.frontmatter.date}</span>
@@ -69,7 +80,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 200)
           id
           fields {
             slug

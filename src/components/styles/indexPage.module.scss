@@ -1,7 +1,18 @@
 .content {
   margin-bottom: 40px;
+  padding: 28px 30px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 80px;
   border-radius: 8px;
+
+  @media screen and (max-width:600px) {
+    padding: 28px 20px;
+  }
+}
+
+.column {
+  @media screen and (max-width:600px) {
+    padding: 0.75em 0;
+  }
 }
 
 .contentLink {
@@ -25,8 +36,38 @@
   padding: 28px 30px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 80px;
   border-radius: 8px;
+
+  @media screen and (max-width:600px) {
+    padding: 28px 12px;
+  }
 }
 
 .postTitle {
+  line-height: 1.7;
   margin: 6px 0 40px !important;
+}
+
+.tagContent {
+  margin-top: 20px;
+  display: flex;
+  font-size: 14px;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0 !important;
+  margin-left: 10px !important;
+}
+
+.tagListItem {
+  text-decoration: underline;
+  color: #444444;
+  margin-top: 0 !important;
+  list-style-type: none;
+  margin-right: 6px;
+
+  > a {
+    color: #928484;
+  }
 }

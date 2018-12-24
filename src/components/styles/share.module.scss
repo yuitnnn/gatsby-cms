@@ -1,0 +1,27 @@
+.shareContent {
+  display: flex;
+  margin-top: 60px;
+}
+
+.twitterShare {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  background-color: #7dcdf7;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.fbShare {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  background-color: #7c9dec;
+  color: #fff;
+  border-radius: 50%;
+}

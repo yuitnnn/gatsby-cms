@@ -25,30 +25,29 @@ export const BlogPostTemplate = ({
       {helmet || ''}
       <div className="container content">
         <div className="columns">
-          <div className="column is-10 is-offset-1">
+          <div className={indexStyles.column + ' ' + 'column' + ' ' + 'is-10' + ' ' + 'is-offset-1'}>
             <div className={indexStyles.postContent}>
               <span className={indexStyles.date}>{date}</span>
-              <h1 className={indexStyles.postTitle}>
+              <h1 className={indexStyles.postTitle} style={{lineHeight: '1.5', fontSize: 22}}>
                 {title}
               </h1>
-              <p>{description}</p>
-              <PostContent content={content} />
+              <PostContent content={content} className="post" />
+              <Share
+                twitterUrl={`http://twitter.com/share?url=https%3A%2F%2Fyuis-webmemo.org${path}%2F&;text=${title}%20-%20YuiTech&amp;via=yu_webmemo`}
+                fbUrl={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyuis-webmemo.org${path}%2F&">Facebook</a>`}
+              />
               {tags && tags.length ? (
-                <div style={{ marginTop: `4rem` }}>
-                  <h4>Tags</h4>
-                  <ul className="taglist">
+                <div className={indexStyles.tagContent}>
+                  <p>Tags:</p>
+                  <ul className={indexStyles.tagList}>
                     {tags.map(tag => (
-                      <li key={tag + `tag`}>
+                      <li key={tag + `tag`} className={indexStyles.tagListItem}>
                         <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                       </li>
                     ))}
                   </ul>
                 </div>
               ) : null}
-              <Share
-                twitterUrl={`http://twitter.com/share?url=https%3A%2F%2Fyuis-webmemo.org${path}%2F&;text=${title}%20-%20YuiTech&amp;via=yu_webmemo`}
-                fbUrl={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyuis-webmemo.org${path}%2F&">Facebook</a>`}
-              />
             </div>
           </div>
         </div>

@@ -1,18 +1,30 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
-
-import indexStyles from "../components/styles/indexPage.module.scss"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import styles from "./styles/share.module.scss"
 
 const Share = ({
   twitterUrl,
   fbUrl,
 }) => (
-    <React.Fragment>
-      <a href={twitterUrl} target="_blank" rel="nofollow">Twitter</a>
-      <a href={fbUrl} target="_blank" rel="nofollow">Facebook</a>
-    </React.Fragment>
+    <div className={styles.shareContent}>
+      <a
+        className={styles.twitterShare}
+        href={twitterUrl}
+        target="_blank"
+        rel="nofollow"
+      >
+        <FontAwesomeIcon icon={['fab', 'twitter']} />
+      </a>
+      <a
+        className={styles.fbShare}
+        href={fbUrl}
+        target="_blank"
+        rel="nofollow"
+      >
+        <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+      </a>
+    </div>
 )
 
 export default Share;
