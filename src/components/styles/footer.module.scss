@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  background: #666;
+  color: #ffffff;
+}
+
+.name {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.sns {
+  margin-bottom: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.github {
+  font-size: 24px;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.twitter {
+  color: #666;
+  background-color: #fff;
+  font-size: 16px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small {
+  font-size: 11px;
+}

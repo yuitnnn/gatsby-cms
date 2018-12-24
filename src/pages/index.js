@@ -7,12 +7,13 @@ import indexStyles from "../components/styles/indexPage.module.scss"
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 // import { faIgloo } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
   // faIgloo,
   faTwitter,
-  faFacebookF
+  faFacebookF,
+  faGithub
 )
 
 // top-page
@@ -79,7 +80,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 150)
+          excerpt(pruneLength: 200)
           id
           fields {
             slug
