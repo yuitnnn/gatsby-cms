@@ -1,0 +1,2 @@
+＃デフォルトのNetlifyサブドメインをプライマリドメインにリダイレクトする
+http://hardcore-ride-8fddb2.netlify.com/* http://yuis-webmemo.org/:splat 301！
