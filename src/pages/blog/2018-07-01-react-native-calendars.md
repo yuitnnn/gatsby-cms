@@ -2,7 +2,7 @@
 path: "react-native-calendars/"
 templateKey: blog-post
 title: 【React Native】react-native-calendarsを使ってカレンダーを実装する方法
-date: 2018-07-01T05:43:02.532Z
+date: 2018-07-01
 description: React Nativeでカレンダーを実装したい場合、「react-native-calendars」というライブラリを使うと簡単に実装することができます。 今回はreact-native-calendarsの使い方や様 ... 
 tags:
   - プログラミング

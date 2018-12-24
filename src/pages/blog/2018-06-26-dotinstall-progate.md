@@ -2,7 +2,7 @@
 path: "paid-progate-dotinstall/"
 templateKey: blog-post
 title: 【Progateとドットインストール】有料会員になって感じたことをまとめてみた
-date: 2018-06-26T05:43:02.532Z
+date: 2018-06-26
 description: プログラミングの学習サイトとして有名な「Progate」「ドットインストール」。それぞれのサービスで有料会員になるとできることや、実際に有料会員になって気付いた良いところ・悪いところの比較をしていきたいと思います！
 tags:
   - プログラミング

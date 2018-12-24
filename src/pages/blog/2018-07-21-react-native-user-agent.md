@@ -2,7 +2,7 @@
 path: "react-native-user-agent/"
 templateKey: blog-post
 title: 【React Native】UserAgentを変更する方法【両OS】
-date: 2018-07-21T05:43:02.532Z
+date: 2018-07-21
 description: React NativeのWebViewのリクエストのUserAgentを変更したいことがあり、その際にいろいろ調べたことをまとめました。 AndroidからのリクエストでUserAgentを変更する際には、React  ...
 tags:
   - プログラミング

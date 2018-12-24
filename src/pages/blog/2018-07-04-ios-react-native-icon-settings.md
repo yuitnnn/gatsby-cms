@@ -2,7 +2,7 @@
 path: "ios-react-native-icon-settings/"
 templateKey: blog-post
 title: 【iOS】React Nativeのアプリにアイコンを設定する方法
-date: 2018-07-04T05:43:02.532Z
+date: 2018-07-04
 description: React Nativeで開発しているアプリにアイコンを設定する方法と、複数サイズのアイコンを自動してくれる便利な「App Iconizer」をご紹介します！
 tags:
   - プログラミング
