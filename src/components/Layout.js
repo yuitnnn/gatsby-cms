@@ -7,12 +7,10 @@ import containerStyles from "./styles/container.module.scss"
 
 const TemplateWrapper = ({ children }) => (
   <div className={containerStyles.container}>
-    <Helmet
-      title="YuiTech | webエンジニアの備忘録"
-      // meta={[
-      //   { name: 'description', content: 'aaa' },
-      // ]}
-    />
+    <Helmet>
+      <title>YuiTech | webエンジニアの備忘録</title>
+      <link type="text/css" rel="stylesheet" href="/index.css"></link>
+    </Helmet>
     <Navbar />
     <div>{children}</div>
   </div>

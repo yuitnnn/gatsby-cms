@@ -37,12 +37,12 @@ export default class IndexPage extends React.Component {
         <section className="section">
         <div className="container content">
           <div className="columns">
-            <div className="column is-10 is-offset-1">
+            <div className={indexStyles.column + ' ' + 'column' + ' ' + 'is-10' + ' ' + 'is-offset-1'}>
               {posts
                 .map(({ node: post }) => (
                     <div
                       className={indexStyles.content}
-                      style={{ padding: '2em 4em' }}
+                      // style={{ padding: '2em 4em' }}
                       key={post.id}
                     >
                       <span className={indexStyles.date}>{post.frontmatter.date}</span>
@@ -79,7 +79,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 150)
           id
           fields {
             slug
